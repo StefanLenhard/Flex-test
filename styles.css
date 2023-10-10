@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    color:#fff;
+    background-color: #5995da;
+    padding: 20px;
+    display:flex; /* this makes the container a flex container & enables flexbox layout mode. */
+    justify-content: center; /* Shifts the content box from the left side into the center. */
+}
+
+.menu {
+    border: 0px solid #fff; /* for debugging */
+    width: 900px;
+    display:flex; /*turns .menu into a nested flex container */
+    justify-content: space-between; /* spreads items out in entire width, adds extra space between. */
+}
+
+.links { /*This is a new flex container for the links element with nested items. */
+    border: 0px solid #fff; /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px
+}
+
+/* The borders could be removed after creating the menu, the are being left in to show the proper order of coding a nested flex. */
+
+.header-container {
+    color: #5995da;
+    background-color: #d6e9fe;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* align-items is for vertical alignment */
+}
+
+.social,
+.logo,
+.subscribe {
+    border: 0px solid #5995da; /* For debugging and illustration --> change .header {align-items: stretch} to show full effects. */
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center; /* Setting this to center also centers the uneven fifth row */
+    flex-wrap: wrap; /* This prevents the images from flowing off the page. */
+    flex-direction: row; /* Setting this to column lets the images flow downwards. Flex direction column rotates the entire flexbox, meaning justify-content and align items change their respective meaning. */
+    align-items: center;
+}
+
+.photo-grid-item {
+    border: 1px solid #fff; /* For debugging */
+    width: 300px;
+    height: 300px;
+}
+
+.first-item {
+    order: 1; /* Default order value is 0 */
+}
+
+.last-item {
+    order: -1; /* This can also be negative, hence moving the item to the first place in line. */
+}
+
+.social,
+.subscribe {
+    align-self: flex-end;
+    margin-bottom: 20px; /* Sends Social Buttons and Logo to bottom of the header. */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-item {
+    border: 1px solid #fff; /* For debugging */
+    background-color: #d6e9fe;
+    height: 200px;
+    flex: 1; /* This tells alls items to stretch to match the width of the footer. */
+}
